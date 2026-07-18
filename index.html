@@ -307,11 +307,9 @@ body{font-family:var(--sr);color:#1B1A17;letter-spacing:-.003em}
 /* nav: solid paper + rule, no glass */
 .nav{background:var(--bg);backdrop-filter:none;-webkit-backdrop-filter:none;border-bottom:1px solid var(--ln)}
 .nav.sc{box-shadow:none;border-bottom:1px solid var(--ln2)}
-/* motion: purposeful and data-first, not a blanket fade-up */
-.rv{opacity:0;transform:translateY(9px);transition:opacity .55s cubic-bezier(.2,.7,.2,1),transform .55s cubic-bezier(.2,.7,.2,1)}
-.rv.in{opacity:1;transform:none}
-.rv .st .ru{width:0;transition:width .7s cubic-bezier(.2,.7,.2,1) .12s}
-.rv.in .st .ru{width:60px}
+/* motion is data-first: the CHARTS draw in, text is always present (no fade-up gate) */
+.rv,.rv.in{opacity:1!important;transform:none!important;transition:none}
+.rv .st .ru,.rv.in .st .ru{width:60px}
 .cue .ci{animation:none;transition:border-color .3s,background .3s,transform .3s}
 .tc,.sc,.ac,.et{transition:border-color .2s,color .2s}
 /* flatten every gradient to a solid spot color */
@@ -632,7 +630,7 @@ document.querySelectorAll(".rv").forEach(function(el){io.observe(el)});
 var bio=new IntersectionObserver(function(en){en.forEach(function(e){if(e.isIntersecting){e.target.querySelectorAll("[data-w]").forEach(function(el,i){var w=el.getAttribute("data-w");setTimeout(function(){el.style.width=w},70+i*85)});bio.unobserve(e.target)}})},{threshold:.3});
 ["grad","iv","sev","ctx"].forEach(function(id){var el=document.getElementById(id);if(el)bio.observe(el)});
 /* fail-safe: never leave in-view content hidden if observers are throttled; still preserves scroll reveal for below-the-fold */
-(function(){function sweep(){var vh=window.innerHeight||800;document.querySelectorAll(".rv").forEach(function(el){if(!el.classList.contains("in")&&el.getBoundingClientRect().top<vh){el.classList.add("in")}});document.querySelectorAll("[data-w]").forEach(function(el){if(el.style.width==="0px"&&el.getBoundingClientRect().top<vh){el.style.width=el.getAttribute("data-w")}})}window.addEventListener("scroll",sweep,{passive:true});window.addEventListener("load",sweep);setTimeout(sweep,900);})();
+(function(){function sweep(){var vh=window.innerHeight||800;document.querySelectorAll(".rv").forEach(function(el){if(!el.classList.contains("in")&&el.getBoundingClientRect().top<vh){el.classList.add("in")}});document.querySelectorAll("[data-w]").forEach(function(el){if(el.style.width==="0px"&&el.getBoundingClientRect().top<vh){el.style.width=el.getAttribute("data-w")}})}window.addEventListener("scroll",sweep,{passive:true});window.addEventListener("load",sweep);setTimeout(sweep,900);setTimeout(function(){document.querySelectorAll("[data-w]").forEach(function(el){if(el.style.width==="0px")el.style.width=el.getAttribute("data-w")})},6000);})();
 var nav=document.getElementById("nav"),links=[].slice.call(document.querySelectorAll(".nl a[data-n]")),secs=["background","methods","results","discussion"].map(function(id){return document.getElementById(id)});
 window.addEventListener("scroll",function(){nav.classList.toggle("sc",window.scrollY>20);var c="",y=window.scrollY+120;secs.forEach(function(s){if(s&&s.offsetTop<=y)c=s.id});links.forEach(function(a){a.classList.toggle("on",a.getAttribute("href")=="#"+c)})},{passive:true});
 function toast(m){var t=document.getElementById("toast");document.getElementById("tmsg").textContent=m;t.classList.add("on");clearTimeout(window._t);window._t=setTimeout(function(){t.classList.remove("on")},2200)}
