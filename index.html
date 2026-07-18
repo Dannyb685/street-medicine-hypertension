@@ -307,10 +307,13 @@ body{font-family:var(--sr);color:#1B1A17;letter-spacing:-.003em}
 /* nav: solid paper + rule, no glass */
 .nav{background:var(--bg);backdrop-filter:none;-webkit-backdrop-filter:none;border-bottom:1px solid var(--ln)}
 .nav.sc{box-shadow:none;border-bottom:1px solid var(--ln2)}
-/* stop the motion */
-.rv{opacity:1!important;transform:none!important;transition:none!important}
-.cue .ci{animation:none}
-.bf,.iff,.gb,.tc,.sc,.ac,.et{transition:none!important}
+/* motion: purposeful and data-first, not a blanket fade-up */
+.rv{opacity:0;transform:translateY(9px);transition:opacity .55s cubic-bezier(.2,.7,.2,1),transform .55s cubic-bezier(.2,.7,.2,1)}
+.rv.in{opacity:1;transform:none}
+.rv .st .ru{width:0;transition:width .7s cubic-bezier(.2,.7,.2,1) .12s}
+.rv.in .st .ru{width:60px}
+.cue .ci{animation:none;transition:border-color .3s,background .3s,transform .3s}
+.tc,.sc,.ac,.et{transition:border-color .2s,color .2s}
 /* flatten every gradient to a solid spot color */
 .bm{background:var(--c)}
 .gb.g1{background:#D89AA3}.gb.g2{background:#C24C5B}.gb.g3{background:var(--c)}
@@ -624,7 +627,7 @@ document.getElementById("tabs").addEventListener("click",function(e){var b=e.tar
 render(0);
 var io=new IntersectionObserver(function(en){en.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}})},{threshold:.12,rootMargin:"0px 0px -40px 0px"});
 document.querySelectorAll(".rv").forEach(function(el){io.observe(el)});
-var bio=new IntersectionObserver(function(en){en.forEach(function(e){if(e.isIntersecting){e.target.querySelectorAll("[data-w]").forEach(function(el){var w=el.getAttribute("data-w");setTimeout(function(){el.style.width=w},80)});bio.unobserve(e.target)}})},{threshold:.3});
+var bio=new IntersectionObserver(function(en){en.forEach(function(e){if(e.isIntersecting){e.target.querySelectorAll("[data-w]").forEach(function(el,i){var w=el.getAttribute("data-w");setTimeout(function(){el.style.width=w},70+i*85)});bio.unobserve(e.target)}})},{threshold:.3});
 ["grad","iv","sev","ctx"].forEach(function(id){var el=document.getElementById(id);if(el)bio.observe(el)});
 var nav=document.getElementById("nav"),links=[].slice.call(document.querySelectorAll(".nl a[data-n]")),secs=["background","methods","results","discussion"].map(function(id){return document.getElementById(id)});
 window.addEventListener("scroll",function(){nav.classList.toggle("sc",window.scrollY>20);var c="",y=window.scrollY+120;secs.forEach(function(s){if(s&&s.offsetTop<=y)c=s.id});links.forEach(function(a){a.classList.toggle("on",a.getAttribute("href")=="#"+c)})},{passive:true});
