@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Hypertension in Miami Street Medicine | Retrospective Cohort</title>
+<meta name="description" content="Blood pressure outcomes, engagement, and attrition in Miami Street Medicine's hypertension program, and the case for street medicine as a reliable bridge to longitudinal care, housing, and social supportive services."/>
+<meta property="og:title" content="Hypertension Management in Miami's Street Medicine Initiative"/>
+<meta property="og:description" content="Street-based care controlled blood pressure for the patients it retained and worked best for the sickest. Its role: a reliable bridge to longitudinal care, housing, and social supportive services."/>
+<meta property="og:type" content="website"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;0,800;0,900;1,500;1,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+<style>
+:root{--bg:#FAF7F5;--sf:#fff;--ink:#181A21;--i2:#565A64;--mut:#8C8F99;--ln:#ECE5E2;--ln2:#E3DBD7;--c:#AF2436;--cd:#7C1424;--cm:#C33F51;--ct:#FBEBED;--cs:#F4D6DB;--st:#2E5C70;--stt:#EAF1F3;--gd:#A9772A;--gdt:#F8F0E2;--gr:#2C7A57;--grt:#E7F2EC;--nv:#141722;--sh1:0 1px 2px rgba(24,26,33,.04),0 2px 8px rgba(24,26,33,.04);--sh2:0 4px 20px rgba(24,26,33,.06),0 1px 3px rgba(24,26,33,.05);--sh3:0 18px 50px rgba(24,26,33,.10),0 4px 12px rgba(24,26,33,.05);--sr:"Playfair Display",Georgia,serif;--ss:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:88px;-webkit-text-size-adjust:100%}
+body{font-family:var(--ss);background:var(--bg);color:var(--ink);line-height:1.6;font-size:17px;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;overflow-x:hidden}
+.wr{max-width:1180px;margin:0 auto;padding:0 32px}
+a{color:inherit;text-decoration:none}
+::selection{background:var(--cs);color:var(--cd)}
+.ic{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0}
+.eb{font-weight:700;font-size:12.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--c)}
+.eb.m{color:var(--mut)}
+/* NAV */
+.nav{position:sticky;top:0;z-index:100;background:rgba(250,247,245,.82);backdrop-filter:saturate(180%) blur(14px);-webkit-backdrop-filter:saturate(180%) blur(14px);border-bottom:1px solid transparent;transition:.3s}
+.nav.sc{border-bottom-color:var(--ln);box-shadow:0 1px 20px rgba(24,26,33,.05)}
+.ni{display:flex;align-items:center;justify-content:space-between;height:72px;gap:24px}
+.br{display:flex;align-items:center;gap:12px;flex-shrink:0}
+.bm{width:38px;height:38px;border-radius:11px;background:linear-gradient(150deg,var(--c),var(--cd));display:grid;place-items:center;box-shadow:0 4px 12px rgba(175,36,54,.28)}
+.bm .ic{width:21px;height:21px;color:#fff}
+.bt{font-weight:700;font-size:16px;letter-spacing:.02em;line-height:1;white-space:nowrap}
+.bt .a{color:var(--ink)}.bt .b{color:var(--c)}
+.bs{font-size:10.5px;letter-spacing:.16em;color:var(--mut);font-weight:600;text-transform:uppercase;margin-top:3px}
+.nl{display:flex;align-items:center;gap:30px}
+.nl a{font-size:13px;font-weight:600;letter-spacing:.09em;text-transform:uppercase;color:var(--i2);position:relative;padding:6px 0;transition:color .2s}
+.nl a::after{content:"";position:absolute;left:0;bottom:-1px;height:2px;width:0;background:var(--c);transition:width .25s}
+.nl a:hover{color:var(--ink)}.nl a:hover::after,.nl a.on::after{width:100%}.nl a.on{color:var(--c)}
+.na{display:flex;align-items:center;gap:8px;flex-shrink:0}
+.nd{width:1px;height:24px;background:var(--ln2);margin:0 4px}
+.nb{display:inline-flex;align-items:center;gap:7px;font-size:12px;font-weight:600;letter-spacing:.09em;text-transform:uppercase;color:var(--i2);padding:8px 12px;border-radius:9px;background:0;border:0;cursor:pointer;transition:.2s;font-family:var(--ss)}
+.nb .ic{width:15px;height:15px}
+.nb:hover{background:var(--ct);color:var(--c)}
+/* HERO */
+.hero{padding:88px 0 70px;text-align:center}
+.hb{display:inline-flex;align-items:center;gap:9px;padding:9px 20px;border-radius:100px;border:1px solid var(--cs);background:var(--ct);font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--c);margin-bottom:34px}
+.hb .dt{width:7px;height:7px;border-radius:50%;background:var(--c);box-shadow:0 0 0 4px rgba(175,36,54,.14)}
+.hero h1{font-family:var(--sr);font-weight:800;font-size:clamp(40px,6.6vw,80px);line-height:1.02;letter-spacing:-.015em;margin:0 auto;max-width:16ch}
+.hero h1 em{font-style:italic;font-weight:700;color:var(--c)}
+.hsub{max-width:60ch;margin:30px auto 0;font-size:clamp(17px,2vw,20px);color:var(--i2);line-height:1.62}
+.hm{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:10px 20px;margin:34px auto 0;font-size:13.5px;color:var(--mut);font-weight:500}
+.hm .sp{width:4px;height:4px;border-radius:50%;background:var(--ln2)}
+.hm b{color:var(--i2);font-weight:600}
+.cue{margin-top:52px;display:inline-flex;flex-direction:column;align-items:center;gap:14px;cursor:pointer;background:0;border:0;font-family:var(--ss)}
+.cue span{font-size:11.5px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--mut)}
+.cue .ci{width:44px;height:44px;border-radius:50%;border:1.5px solid var(--ln2);display:grid;place-items:center;color:var(--c);transition:.3s;animation:bob 2.4s ease-in-out infinite}
+.cue:hover .ci{border-color:var(--c);background:var(--ct);transform:translateY(2px)}
+.cue .ci .ic{width:18px;height:18px}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(6px)}}
+/* TOC */
+.toc{padding:56px 0 80px;border-top:1px solid var(--ln);background:linear-gradient(180deg,rgba(255,255,255,.5),rgba(250,247,245,0))}
+.cap{text-align:center;margin-bottom:38px}
+.cap .eb{display:block;margin-bottom:12px}
+.cap h2{font-family:var(--sr);font-weight:700;font-size:clamp(28px,3.6vw,40px);letter-spacing:-.01em}
+.tg{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.tc{position:relative;background:var(--sf);border:1px solid var(--ln);border-radius:16px;padding:26px 24px 22px;box-shadow:var(--sh1);transition:.28s cubic-bezier(.2,.7,.2,1);overflow:hidden}
+.tc:hover{transform:translateY(-6px);box-shadow:var(--sh3);border-color:var(--cs)}
+.tc .tci{position:absolute;top:20px;right:20px;color:var(--c);opacity:.16;transition:.28s}
+.tc:hover .tci{opacity:.34}.tc .tci .ic{width:44px;height:44px;stroke-width:1.5}
+.tc .tn{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--c);margin-bottom:44px}
+.tc h3{font-family:var(--sr);font-weight:700;font-size:23px;margin-bottom:5px}
+.tc p{font-size:14px;color:var(--i2);margin-bottom:20px}
+.tc .tl{display:inline-flex;align-items:center;gap:7px;font-size:11.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--mut);transition:.2s}
+.tc:hover .tl{color:var(--c);gap:11px}.tc .tl .ic{width:14px;height:14px}
+/* SECTION */
+.bd{padding:92px 0;position:relative}
+.bd.alt{background:linear-gradient(180deg,#fff,#FCFAF9);border-top:1px solid var(--ln);border-bottom:1px solid var(--ln)}
+.sh .eb{margin-bottom:20px;display:block}
+.sp2{display:grid;grid-template-columns:minmax(0,.92fr) minmax(0,1.08fr);gap:66px;align-items:start}
+.st{font-family:var(--sr);font-weight:800;font-size:clamp(34px,4.4vw,54px);line-height:1.04;letter-spacing:-.015em}
+.st .ru{display:block;width:60px;height:4px;border-radius:3px;background:var(--c);margin-top:26px}
+.ld{font-size:18px;color:var(--i2)}
+.pr p{margin-bottom:20px;color:var(--i2);font-size:16.5px;line-height:1.68}
+.pr p:last-child{margin-bottom:0}
+.pr strong{color:var(--ink);font-weight:600}
+.pr .el{font-weight:600;color:var(--ink);font-style:italic}
+.su{font-size:.7em;vertical-align:super;color:var(--c);font-weight:600;line-height:0}
+/* STAT RAIL */
+.sr{background:var(--sf);border:1px solid var(--ln);border-radius:18px;box-shadow:var(--sh2);overflow:hidden;margin-top:30px}
+.sr .sh2{padding:18px 26px;border-bottom:1px solid var(--ln);display:flex;align-items:center;gap:10px;background:var(--ct)}
+.sr .sh2 .ic{width:18px;height:18px;color:var(--c)}
+.sr .sh2 span{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--cd)}
+.srr{display:flex;align-items:baseline;gap:18px;padding:22px 26px;border-bottom:1px solid var(--ln)}
+.srr:last-child{border-bottom:0}
+.srn{font-family:var(--sr);font-weight:800;font-size:40px;line-height:1;color:var(--c);flex-shrink:0;min-width:118px;letter-spacing:-.02em}
+.srn small{font-size:19px;font-weight:600;color:var(--cm)}
+.srt{font-size:14.5px;color:var(--i2);line-height:1.5}.srt b{color:var(--ink);font-weight:600}
+/* CHIPS */
+.ch{display:flex;flex-wrap:wrap;gap:9px;margin-top:26px}
+.chp{display:inline-flex;align-items:center;gap:7px;padding:8px 14px;border-radius:100px;background:var(--sf);border:1px solid var(--ln2);font-size:13px;font-weight:600;color:var(--i2)}
+.chp .ic{width:14px;height:14px;color:var(--c)}
+/* FUNNEL */
+.fc{background:var(--sf);border:1px solid var(--ln);border-radius:20px;box-shadow:var(--sh2);padding:30px 30px 26px}
+.fct{display:flex;align-items:center;justify-content:space-between;margin-bottom:6px}
+.fct .eb{color:var(--mut)}
+.fcs{font-size:13px;color:var(--mut);font-weight:500}.fcs b{color:var(--ink);font-weight:700}
+.fn{display:flex;flex-direction:column;align-items:center;margin-top:20px}
+.fs{width:100%;display:flex;flex-direction:column;align-items:center}
+.fb{border-radius:12px;padding:16px 22px;display:flex;align-items:center;justify-content:space-between;gap:16px;color:#fff;box-shadow:0 6px 18px rgba(175,36,54,.16)}
+.fb .fl{font-size:13.5px;font-weight:600;opacity:.96;text-align:left}
+.fb .fu{font-family:var(--sr);font-weight:800;font-size:26px;line-height:1;letter-spacing:-.01em;white-space:nowrap}
+.fb .fu small{font-size:13px;font-weight:600;opacity:.82;font-family:var(--ss);margin-left:4px}
+.fcn{width:1.5px;height:16px;background:var(--ln2)}
+.far{color:var(--mut);height:18px;display:grid;place-items:center}.far .ic{width:16px;height:16px}
+.ff{width:100%;margin-top:18px;border-radius:14px;padding:20px 24px;background:var(--sf);border:2px solid var(--c);display:flex;align-items:center;justify-content:space-between;gap:16px;box-shadow:0 8px 24px rgba(175,36,54,.14)}
+.ffn{font-family:var(--sr);font-weight:900;font-size:34px;color:var(--c);line-height:1;letter-spacing:-.02em}
+.ffl{font-size:12.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase}
+.ffl span{display:block;font-size:12px;font-weight:500;letter-spacing:0;text-transform:none;color:var(--i2);margin-top:3px}
+.ffc{width:40px;height:40px;border-radius:50%;background:var(--c);display:grid;place-items:center;flex-shrink:0}
+.ffc .ic{width:20px;height:20px;color:#fff;stroke-width:2.4}
+.at{margin-top:16px;border-radius:12px;padding:16px 18px;background:var(--gdt);border:1px solid #EBD9B8;display:flex;gap:13px;align-items:flex-start}
+.at .ic{width:20px;height:20px;color:var(--gd);margin-top:1px}
+.atn{font-family:var(--sr);font-weight:800;color:var(--gd);font-size:17px}
+.at p{font-size:13.5px;color:#7a5a1e;line-height:1.5}
+/* HEADLINE STATS */
+.sb{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.sc{background:var(--sf);border:1px solid var(--ln);border-radius:16px;padding:28px 24px;box-shadow:var(--sh1);position:relative;overflow:hidden;transition:.28s}
+.sc:hover{transform:translateY(-4px);box-shadow:var(--sh2)}
+.sc::before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--c)}
+.sc.stl::before{background:var(--st)}.sc.grn::before{background:var(--gr)}
+.scn{font-family:var(--sr);font-weight:800;font-size:46px;line-height:1;letter-spacing:-.02em;color:var(--c)}
+.sc.stl .scn{color:var(--st)}.sc.grn .scn{color:var(--gr)}.scn small{font-size:20px;font-weight:600}
+.scl{margin-top:14px;font-size:14px;color:var(--i2);line-height:1.45;font-weight:500}.scl b{color:var(--ink);font-weight:600}
+.sct{display:inline-block;margin-top:14px;font-size:10.5px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;padding:4px 10px;border-radius:100px;background:var(--ct);color:var(--cd)}
+.sc.stl .sct{background:var(--stt);color:var(--st)}.sc.grn .sct{background:var(--grt);color:var(--gr)}
+/* EXPLORER */
+.ex{margin-top:40px}
+.ext{display:flex;flex-direction:column;align-items:center;gap:11px;margin-bottom:30px}
+.exc{font-size:11px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:var(--mut);display:flex;align-items:center;gap:7px}
+.exc .ic{width:14px;height:14px}
+.exts{display:flex;gap:9px;flex-wrap:wrap;justify-content:center}
+.et{font-family:var(--sr);font-weight:700;font-size:16px;padding:11px 20px;border-radius:11px;cursor:pointer;background:var(--sf);border:1px solid var(--ln2);color:var(--i2);transition:.22s;white-space:nowrap}
+.et:hover{border-color:var(--cs);color:var(--c)}
+.et.on{background:var(--c);border-color:var(--c);color:#fff;box-shadow:0 6px 16px rgba(175,36,54,.24)}
+.ep{background:var(--sf);border:1px solid var(--ln);border-radius:20px;box-shadow:var(--sh2);padding:38px 40px}
+.eph{display:flex;align-items:flex-start;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-bottom:8px}
+.eph h3{font-family:var(--sr);font-weight:800;font-size:30px;letter-spacing:-.01em}
+.ept{font-size:12px;font-weight:600;color:var(--c);display:inline-flex;align-items:center;gap:6px;margin-top:8px}
+.ept .ic{width:15px;height:15px}
+.epn{flex-shrink:0;display:inline-flex;align-items:center;gap:8px;padding:9px 16px;border-radius:100px;border:1px solid var(--ln2);font-size:13px;font-weight:600;background:var(--bg)}
+.epn b{font-family:var(--sr);font-size:16px;color:var(--c)}
+.eg{display:grid;grid-template-columns:1.15fr 1fr;gap:40px;margin-top:26px;padding-top:26px;border-top:1px solid var(--ln)}
+.evt{font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--mut);margin-bottom:22px}
+.bam{margin-bottom:26px}.bam:last-child{margin-bottom:0}
+.bt2{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:10px}
+.bn{font-size:14px;font-weight:600}
+.bd2{font-family:var(--sr);font-weight:800;font-size:22px;letter-spacing:-.01em;color:var(--c)}
+.bd2.s{color:var(--st)}
+.bt3{position:relative;height:44px;border-radius:9px;background:var(--bg);border:1px solid var(--ln);overflow:hidden}
+.bf{position:absolute;top:0;bottom:0;left:0;border-radius:9px 0 0 9px;transition:width .7s cubic-bezier(.2,.7,.2,1)}
+.bf.sy{background:linear-gradient(90deg,var(--cs),var(--c))}
+.bf.di{background:linear-gradient(90deg,#bcd4dd,var(--st))}
+.bmk{position:absolute;top:-3px;bottom:-3px;width:2px;background:var(--ink);opacity:.5}
+.bl{display:flex;justify-content:space-between;margin-top:8px;font-size:12px;color:var(--mut)}
+.fct2{display:flex;gap:12px;align-items:flex-start;margin-bottom:16px}
+.fct2 .ic{width:18px;height:18px;margin-top:2px}
+.fct2.p .ic{color:var(--gr)}.fct2.n .ic{color:var(--st)}.fct2.c .ic{color:var(--gd)}
+.fct2 p{font-size:14px;color:var(--i2);line-height:1.5}.fct2 p b{color:var(--ink);font-weight:600}
+.en{margin-top:22px;padding:16px 20px;border-radius:12px;background:var(--bg);border:1px dashed var(--ln2);font-size:13.5px;color:var(--i2);font-style:italic;line-height:1.55}
+/* FIGURE */
+.fig{background:var(--sf);border:1px solid var(--ln);border-radius:20px;box-shadow:var(--sh2);padding:36px 40px;margin-top:26px}
+.fh .k{font-size:12px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:var(--c);margin-bottom:10px}
+.fh h3{font-family:var(--sr);font-weight:800;font-size:28px;letter-spacing:-.01em}
+.fh p{font-size:15px;color:var(--i2);margin-top:8px;max-width:64ch}
+.fcap{margin-top:22px;font-size:13px;color:var(--mut);line-height:1.55;padding-top:18px;border-top:1px solid var(--ln)}
+.fcap b{color:var(--i2);font-weight:600}
+.gd{margin-top:30px;display:flex;flex-direction:column;gap:20px}
+.gr{display:grid;grid-template-columns:190px 1fr;gap:20px;align-items:center}
+.grl{text-align:right}.grl .n{font-size:14px;font-weight:600}.grl .x{font-size:12px;color:var(--mut);margin-top:2px}
+.gbw{position:relative;display:flex;align-items:center;gap:14px}
+.gb{height:38px;border-radius:9px;transition:width .8s cubic-bezier(.2,.7,.2,1);min-width:40px}
+.gb.g1{background:linear-gradient(90deg,#E5A6AF,#C33F51)}
+.gb.g2{background:linear-gradient(90deg,#D06A78,#AF2436)}
+.gb.g3{background:linear-gradient(90deg,#B0233A,#7C1424)}
+.gv{font-family:var(--sr);font-weight:800;font-size:22px;color:var(--c);white-space:nowrap;letter-spacing:-.01em}
+.gax{margin-top:8px;display:flex;justify-content:space-between;font-size:11px;color:var(--mut);padding-left:210px}
+.iv{margin-top:28px;display:flex;flex-direction:column;gap:16px}
+.ir .it{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin-bottom:8px}
+.inm{font-size:14.5px;font-weight:600}.inm small{font-weight:500;color:var(--mut);font-size:12.5px;margin-left:6px}
+.ivl{font-family:var(--sr);font-weight:700;font-size:16px;color:var(--i2)}.ivl b{color:var(--c)}
+.itk{height:14px;border-radius:100px;background:var(--bg);border:1px solid var(--ln);overflow:hidden}
+.iff{height:100%;border-radius:100px;transition:width .8s cubic-bezier(.2,.7,.2,1)}
+.iff.c1{background:linear-gradient(90deg,var(--c),var(--cd))}
+.iff.c2{background:linear-gradient(90deg,var(--cm),var(--c))}
+.iff.c3{background:var(--st)}.iff.c4{background:var(--gd)}
+.ivh{margin-top:26px;padding:20px 24px;border-radius:14px;background:var(--ct);border:1px solid var(--cs);display:flex;align-items:center;gap:18px}
+.ivhn{font-family:var(--sr);font-weight:900;font-size:40px;color:var(--c);line-height:1}
+.ivh p{font-size:14.5px;color:var(--cd);line-height:1.5}.ivh p b{font-weight:700}
+.svb{display:flex;height:56px;border-radius:12px;overflow:hidden;margin-top:26px;box-shadow:var(--sh1)}
+.svs{display:grid;place-items:center;color:#fff;font-size:13px;font-weight:700;transition:filter .2s}
+.svs:hover{filter:brightness(1.06)}
+.svs .in{text-align:center;line-height:1.15;padding:0 6px}
+.svs .in small{display:block;font-size:11px;font-weight:500;opacity:.9}
+.svl{display:flex;flex-wrap:wrap;gap:16px 24px;margin-top:20px}
+.sl{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--i2)}
+.sl .d{width:11px;height:11px;border-radius:3px}.sl b{color:var(--ink);font-weight:600}
+.tr{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:26px}
+.trc{background:var(--bg);border:1px solid var(--ln);border-radius:14px;padding:22px 20px;text-align:center}
+.trn{font-family:var(--sr);font-weight:800;font-size:34px;color:var(--c);line-height:1}
+.trt{font-size:13.5px;color:var(--i2);margin-top:10px;line-height:1.45}.trt b{color:var(--ink)}
+.du{margin-top:26px;background:linear-gradient(120deg,var(--nv),#1d2233);border-radius:18px;padding:32px 36px;color:#fff;display:flex;align-items:center;gap:32px;flex-wrap:wrap}
+.dui{width:52px;height:52px;border-radius:14px;background:rgba(255,255,255,.1);display:grid;place-items:center;flex-shrink:0}
+.dui .ic{width:26px;height:26px;color:#fff}
+.dub{flex:1;min-width:260px}
+.duk{font-size:11.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#E5A6AF;margin-bottom:8px}
+.dub p{font-size:15.5px;color:rgba(255,255,255,.86);line-height:1.55}.dub p b{color:#fff;font-weight:600}
+.dus{text-align:center;flex-shrink:0}
+.dusn{font-family:var(--sr);font-weight:800;font-size:44px;line-height:1}
+.dusl{font-size:12px;color:rgba(255,255,255,.6);margin-top:6px}
+/* DISCUSSION */
+.dg{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+.dc h3{font-family:var(--sr);font-weight:800;font-size:32px;letter-spacing:-.01em;margin-bottom:22px}
+.dc .sub{font-family:var(--sr);font-weight:700;font-size:20px;margin:26px 0 10px;display:flex;align-items:center;gap:10px}
+.dc .sub .ic{width:19px;height:19px;color:var(--c)}
+.dc p{color:var(--i2);font-size:16px;line-height:1.66;margin-bottom:16px}.dc p strong{color:var(--ink);font-weight:600}
+.co{margin:24px 0;border-radius:16px;padding:24px 26px;background:var(--gdt);border:1px solid #EBD9B8}
+.cok{display:flex;align-items:center;gap:9px;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gd);margin-bottom:12px}
+.cok .ic{width:16px;height:16px}
+.co p{font-size:14.5px;color:#6f531d;line-height:1.6;margin:0}.co p b{color:#5a4315;font-weight:700}
+.cl{list-style:none;margin-top:8px}
+.cl li{display:flex;gap:13px;padding:13px 0;border-bottom:1px solid var(--ln);font-size:14.5px;color:var(--i2);line-height:1.5}
+.cl li:last-child{border-bottom:0}
+.cl li .v{font-family:var(--sr);font-weight:800;font-size:17px;color:var(--c);flex-shrink:0;min-width:96px}.cl li b{color:var(--ink);font-weight:600}
+.lm{margin-top:36px;background:var(--sf);border:1px solid var(--ln);border-left:4px solid var(--st);border-radius:14px;padding:32px 36px;box-shadow:var(--sh1)}
+.lmk{display:flex;align-items:center;gap:10px;font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--st);margin-bottom:18px}
+.lmk .ic{width:17px;height:17px}
+.lg{display:grid;grid-template-columns:1fr 1fr;gap:20px 40px}
+.li{display:flex;gap:13px;align-items:flex-start}
+.li .ic{width:17px;height:17px;color:var(--st);margin-top:3px}
+.li p{font-size:14px;color:var(--i2);line-height:1.55}.li p b{color:var(--ink);font-weight:600}
+.pq{text-align:center;max-width:64ch;margin:70px auto 0}
+.pqm{font-family:var(--sr);font-size:90px;color:var(--cs);line-height:.5;height:44px;display:block}
+.pq p{font-family:var(--sr);font-style:italic;font-weight:500;font-size:clamp(22px,2.9vw,30px);line-height:1.42;letter-spacing:-.01em}
+.pqb{margin-top:24px;font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--mut)}
+/* AUTHORS */
+.au{padding:88px 0;text-align:center}
+.ag{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin-top:44px}
+.ac{background:var(--sf);border:1px solid var(--ln);border-radius:16px;padding:30px 22px;box-shadow:var(--sh1);transition:.28s}
+.ac:hover{transform:translateY(-4px);box-shadow:var(--sh2)}
+.av{width:62px;height:62px;border-radius:50%;margin:0 auto 18px;display:grid;place-items:center;font-family:var(--sr);font-weight:700;font-size:23px;color:#fff;background:linear-gradient(150deg,var(--c),var(--cd));box-shadow:0 6px 16px rgba(175,36,54,.24)}
+.ac h4{font-family:var(--sr);font-weight:700;font-size:19px}
+.ac .dg2{font-size:12.5px;font-weight:600;letter-spacing:.05em;color:var(--c);text-transform:uppercase;margin-top:4px}
+.ac .af{font-size:12.5px;color:var(--mut);margin-top:10px;line-height:1.45}
+/* REFS */
+.rf{padding:80px 0;border-top:1px solid var(--ln);background:linear-gradient(180deg,#FCFAF9,var(--bg))}
+.rg{display:grid;grid-template-columns:1fr 1fr;gap:14px 40px;margin-top:38px}
+.re{display:flex;gap:14px;padding:14px 0;border-bottom:1px solid var(--ln);align-items:flex-start}
+.re .rn2{font-family:var(--sr);font-weight:700;font-size:14px;color:var(--c);flex-shrink:0;min-width:26px;padding-top:1px}
+.re p{font-size:13.5px;color:var(--i2);line-height:1.5}.re p i{font-style:italic}
+.rnote{margin-top:30px;text-align:center;font-size:13.5px;color:var(--mut);font-style:italic}
+/* SHARE */
+.share{background:linear-gradient(135deg,var(--c),var(--cd));padding:82px 0;text-align:center;color:#fff}
+.shi{width:58px;height:58px;border-radius:16px;background:rgba(255,255,255,.14);display:grid;place-items:center;margin:0 auto 26px}
+.shi .ic{width:28px;height:28px;color:#fff}
+.share h2{font-family:var(--sr);font-weight:700;font-size:clamp(28px,3.6vw,40px);letter-spacing:-.01em}
+.share p{max-width:56ch;margin:16px auto 0;font-size:16px;color:rgba(255,255,255,.82);line-height:1.6}
+.shb{display:flex;gap:16px;justify-content:center;margin-top:34px;flex-wrap:wrap}
+.sbt{display:inline-flex;align-items:center;gap:11px;padding:17px 28px;border-radius:13px;font-size:15px;font-weight:600;cursor:pointer;transition:.2s;border:0;font-family:var(--ss)}
+.sbt .ic{width:19px;height:19px}
+.sbt.lt{background:#fff;color:var(--c)}.sbt.lt:hover{transform:translateY(-3px);box-shadow:0 12px 28px rgba(0,0,0,.2)}
+.sbt.gh{background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.28)}.sbt.gh:hover{background:rgba(255,255,255,.2);transform:translateY(-3px)}
+/* FOOTER */
+.ft{background:var(--nv);color:#fff;padding:56px 0 40px}
+.fti{display:flex;align-items:flex-start;justify-content:space-between;gap:40px;flex-wrap:wrap}
+.ft h3{font-family:var(--sr);font-weight:700;font-size:22px}
+.fsub{font-size:14px;color:rgba(255,255,255,.55);margin-top:8px;max-width:46ch;line-height:1.5}
+.fmeta{text-align:right;font-size:13px;color:rgba(255,255,255,.55);line-height:1.9}.fmeta i{font-style:italic}
+.bkt{display:inline-flex;align-items:center;gap:8px;margin-top:16px;font-size:11.5px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:rgba(255,255,255,.7);cursor:pointer;background:0;border:0;font-family:var(--ss);transition:.2s}
+.bkt:hover{color:#fff}.bkt .ic{width:14px;height:14px}
+.fbase{margin-top:40px;padding-top:24px;border-top:1px solid rgba(255,255,255,.1);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:12.5px;color:rgba(255,255,255,.4)}
+/* TOAST */
+.ts{position:fixed;bottom:28px;left:50%;transform:translateX(-50%) translateY(20px);opacity:0;pointer-events:none;background:var(--ink);color:#fff;padding:13px 22px;border-radius:100px;font-size:14px;font-weight:500;z-index:200;box-shadow:var(--sh3);transition:.3s;display:flex;align-items:center;gap:9px}
+.ts.on{opacity:1;transform:translateX(-50%) translateY(0)}.ts .ic{width:16px;height:16px;color:#7fd1a8}
+/* REVEAL */
+.rv{opacity:0;transform:translateY(24px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1)}
+.rv.in{opacity:1;transform:none}
+@media(max-width:1000px){.tg,.sb,.ag{grid-template-columns:repeat(2,1fr)}.sp2,.dg{grid-template-columns:1fr;gap:40px}.rg,.lg,.eg{grid-template-columns:1fr}.nl{display:none}}
+@media(max-width:640px){.wr{padding:0 20px}body{font-size:16px}.tg,.sb,.ag,.tr{grid-template-columns:1fr}.na .nb span{display:none}.hero{padding:56px 0 50px}.bd{padding:64px 0}.ep,.fig,.fc{padding:24px 22px}.gr{grid-template-columns:1fr;gap:8px}.grl{text-align:left}.gax{display:none}.du{padding:26px 24px}.fti{flex-direction:column}.fmeta{text-align:left}}
+@media print{.nav,.cue,.share,.ts,.bkt{display:none!important}body{background:#fff;font-size:11pt}.rv{opacity:1!important;transform:none!important}.bd{padding:24px 0;page-break-inside:avoid}.sc,.tc,.ac,.fc,.fig,.ep{box-shadow:none}}
+</style>
+</head>
+<body>
+<svg style="display:none" xmlns="http://www.w3.org/2000/svg">
+<symbol id="i-pulse" viewBox="0 0 24 24"><path d="M3 12h4l2 5 4-12 2 7h6"/></symbol>
+<symbol id="i-share" viewBox="0 0 24 24"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></symbol>
+<symbol id="i-print" viewBox="0 0 24 24"><path d="M6 9V2h12v7M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2M6 14h12v8H6z"/></symbol>
+<symbol id="i-down" viewBox="0 0 24 24"><path d="M12 5v14M19 12l-7 7-7-7"/></symbol>
+<symbol id="i-right" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+<symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></symbol>
+<symbol id="i-checkc" viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="M22 4L12 14.01l-3-3"/></symbol>
+<symbol id="i-alert" viewBox="0 0 24 24"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><path d="M12 9v4M12 17h.01"/></symbol>
+<symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></symbol>
+<symbol id="i-users" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></symbol>
+<symbol id="i-activity" viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></symbol>
+<symbol id="i-clock" viewBox="0 0 24 24"><path d="M12 8v4l3 3M12 3a9 9 0 1 0 9 9"/><path d="M21 3v6h-6"/></symbol>
+<symbol id="i-globe" viewBox="0 0 24 24"><path d="M3 12a9 9 0 1 0 18 0 9 9 0 0 0-18 0zM3 12h18M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18"/></symbol>
+<symbol id="i-flask" viewBox="0 0 24 24"><path d="M3 4h18M6 4v7l-3 8h18l-3-8V4"/></symbol>
+<symbol id="i-chart" viewBox="0 0 24 24"><path d="M3 12h3l2 6 4-14 3 10 2-4h4"/></symbol>
+<symbol id="i-bulb" viewBox="0 0 24 24"><path d="M12 3v3M5.6 5.6l2.1 2.1M3 12h3M18 12h3M16.3 7.7l2.1-2.1M8 21h8M9 17a5 5 0 1 1 6 0c-.7.5-1 1-1 2H10c0-1-.3-1.5-1-2z"/></symbol>
+<symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 2v20M2 12h20"/></symbol>
+<symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6L6 18M6 6l12 12"/></symbol>
+<symbol id="i-trend" viewBox="0 0 24 24"><path d="M3 3v18h18M7 14l4-4 4 4 4-6"/></symbol>
+<symbol id="i-copy" viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></symbol>
+<symbol id="i-up" viewBox="0 0 24 24"><path d="M12 19V5M5 12l7-7 7 7"/></symbol>
+</svg>
+
+<nav class="nav" id="nav"><div class="wr ni">
+<a href="#top" class="br"><span class="bm"><svg class="ic"><use href="#i-pulse"/></svg></span><span><span class="bt"><span class="a">STREET MEDICINE</span> <span class="b">· HTN</span></span><span class="bs">Miami · Retrospective Cohort</span></span></a>
+<div class="nl"><a href="#background" data-n>Background</a><a href="#methods" data-n>Methods</a><a href="#results" data-n>Results</a><a href="#discussion" data-n>Discussion</a></div>
+<div class="na"><div class="nd"></div><button class="nb" id="shB"><svg class="ic"><use href="#i-share"/></svg><span>Share</span></button><button class="nb" id="prB"><svg class="ic"><use href="#i-print"/></svg><span>Export</span></button></div>
+</div></nav>
+<span id="top"></span>
+
+<header class="hero"><div class="wr">
+<div class="hb"><span class="dt"></span> Retrospective Cohort Study</div>
+<h1>Hypertension Management in Miami's <em>Street Medicine</em> Initiative</h1>
+<p class="hsub">Four years of blood pressure care delivered on foot in Miami-Dade County: who engaged, who improved, and who was never seen again.</p>
+<div class="hm"><span><b>Miami Street Medicine</b></span><span class="sp"></span><span>Feb 2021 – Jan 2025</span><span class="sp"></span><span><b>560</b> screened · <b>65</b> analytic cohort</span><span class="sp"></span><span>Target: <b>J Gen Intern Med</b></span></div>
+<button class="cue" id="cueB"><span>Begin</span><span class="ci"><svg class="ic"><use href="#i-down"/></svg></span></button>
+</div></header>
+
+<section class="toc" id="toc"><div class="wr">
+<div class="cap"><span class="eb m">Structure</span><h2>The Study at a Glance</h2></div>
+<div class="tg">
+<a href="#background" class="tc rv"><div class="tci"><svg class="ic"><use href="#i-globe"/></svg></div><div class="tn">Section 01</div><h3>Background</h3><p>Burden &amp; barriers</p><span class="tl">View section <svg class="ic"><use href="#i-right"/></svg></span></a>
+<a href="#methods" class="tc rv"><div class="tci"><svg class="ic"><use href="#i-flask"/></svg></div><div class="tn">Section 02</div><h3>Methods</h3><p>Cohort &amp; retention funnel</p><span class="tl">View section <svg class="ic"><use href="#i-right"/></svg></span></a>
+<a href="#results" class="tc rv"><div class="tci"><svg class="ic"><use href="#i-chart"/></svg></div><div class="tn">Section 03</div><h3>Results</h3><p>Blood-pressure outcomes</p><span class="tl">View section <svg class="ic"><use href="#i-right"/></svg></span></a>
+<a href="#discussion" class="tc rv"><div class="tci"><svg class="ic"><use href="#i-bulb"/></svg></div><div class="tn">Section 04</div><h3>Discussion</h3><p>A reliable bridge</p><span class="tl">View section <svg class="ic"><use href="#i-right"/></svg></span></a>
+</div></div></section>
+
+<section class="bd" id="background"><div class="wr sp2">
+<div class="sh rv"><span class="eb">01 · Introduction</span><h2 class="st">Hypertension Without Shelter<span class="ru"></span></h2>
+<div class="sr"><div class="sh2"><svg class="ic"><use href="#i-activity"/></svg><span>The scale of the problem</span></div>
+<div class="srr"><div class="srn">2–4<small>×</small></div><div class="srt">Higher <b>hypertension burden</b> among unsheltered adults versus housed populations.</div></div>
+<div class="srr"><div class="srn">~10<small>×</small></div><div class="srt"><b>All-cause mortality</b> among unsheltered adults relative to the general population.</div></div>
+<div class="srr"><div class="srn">43.7<small>%</small></div><div class="srt">US adults with hypertension who are <b>controlled</b>, even in the general, housed population.</div></div>
+</div>
+</div>
+<div class="pr rv">
+<p>Hypertension is largely preventable and treatable with inexpensive screening and medications, yet nearly half of United States adults have it and fewer than half achieve control (<strong>43.7%</strong> in 2017–2018)<span class="su">1–3</span>, at an annual attributable cost of roughly <strong>$131 billion</strong>.<span class="su">4</span> That gap prompted the Surgeon General's 2020 Call to Action.<span class="su">5</span></p>
+<p>People experiencing unsheltered homelessness (living in places not intended for human habitation) face a hypertension burden <strong>two to four times higher</strong> than housed populations.<span class="su">6–10</span> Cardiovascular disease is the leading cause of death among older homeless men and a top-three cause overall<span class="su">11,12</span>, and all-cause mortality among unsheltered adults approaches <strong>ten times</strong> that of the general population.<span class="su">13–15</span></p>
+<p>Structural and social factors perpetuate this disparity. Patients must prioritize immediate survival, lack transportation and medication storage, and navigate fragmented, inflexible health systems, all of which delay diagnosis, impede adherence, and prevent follow-up.<span class="su">16–20</span> <span class="el">Street medicine, delivering care on foot directly to patients in encampments and transitional spaces, is designed to overcome these barriers.</span><span class="su">28–31</span> But high-quality data on chronic-disease outcomes, and on the attrition that constrains such programs, remain sparse.</p>
+</div>
+</div></section>
+
+<section class="bd alt" id="methods"><div class="wr sp2">
+<div class="rv">
+<div class="sh"><span class="eb">02 · Methods</span><h2 class="st">Cohort &amp; Retention<span class="ru"></span></h2></div>
+<div class="pr" style="margin-top:26px">
+<p>A <strong>retrospective cohort study</strong> of encounters documented by Miami Street Medicine from February 2021 through January 2025. Volunteer physicians, nurses, medical students, and patient care coordinators deliver free primary and urgent care in the field and coordinate referrals to primary care, housing, and supportive services, following the Street Medicine Institute's consensus hypertension guidance.<span class="su">36</span> The University of Miami IRB approved the protocol; reporting follows STROBE.</p>
+<p>Eligible participants were adults (≥18 y) experiencing unsheltered homelessness with BP recorded in the EMR. The <strong>longitudinal analytic cohort</strong> comprised patients with hypertension (documented diagnosis or repeated readings ≥140/90 mmHg) and <strong>at least three BP assessments</strong>. Multiple same-day readings were averaged into a daily mean.</p>
+<p>First-to-final changes were tested with paired <i>t</i>-tests (Wilcoxon confirming diastolic). To model trajectories across all <strong>345 visits</strong> while accounting for repeated measures, we fit <strong>linear mixed-effects models</strong> with time as a fixed effect and patient-level random intercepts. A retention funnel quantified attrition among all screened patients.</p>
+</div>
+<div class="ch">
+<span class="chp"><svg class="ic"><use href="#i-check"/></svg>Retrospective cohort</span>
+<span class="chp"><svg class="ic"><use href="#i-check"/></svg>Linear mixed-effects</span>
+<span class="chp"><svg class="ic"><use href="#i-check"/></svg>Paired <i>t</i> / Wilcoxon</span>
+<span class="chp"><svg class="ic"><use href="#i-check"/></svg>Python 3.11</span>
+<span class="chp"><svg class="ic"><use href="#i-check"/></svg>STROBE-reported</span>
+</div>
+</div>
+<div class="fc rv">
+<div class="fct"><span class="eb">Retention Funnel</span><span class="fcs"><b>1,707</b> patients served by MSM</span></div>
+<div class="fn">
+<div class="fs"><div class="fb" style="width:100%;background:linear-gradient(135deg,#C97A85,#B0233A)"><span class="fl">Unique adults screened<br><small style="opacity:.8">912 street-based BP screenings</small></span><span class="fu">560</span></div></div>
+<div class="fcn"></div><div class="far"><svg class="ic"><use href="#i-down"/></svg></div>
+<div class="fs"><div class="fb" style="width:80%;background:linear-gradient(135deg,#BC5563,#A62039)"><span class="fl">≥1 stage-2 reading (≥140/90)</span><span class="fu">268<small>47.9%</small></span></div></div>
+<div class="fcn"></div><div class="far"><svg class="ic"><use href="#i-down"/></svg></div>
+<div class="fs"><div class="fb" style="width:56%;background:linear-gradient(135deg,#A83442,#8E1B2E)"><span class="fl">Returned at least once</span><span class="fu">92<small>34.3%</small></span></div></div>
+<div class="fcn"></div><div class="far"><svg class="ic"><use href="#i-down"/></svg></div>
+<div class="ff"><div class="ffc"><svg class="ic"><use href="#i-check"/></svg></div><div style="flex:1"><div class="ffl">Longitudinal analytic cohort<span>Hypertension + ≥3 BP assessments · 11.6% of screened</span></div></div><div class="ffn">65</div></div>
+</div>
+<div class="at"><svg class="ic"><use href="#i-alert"/></svg><p><span class="atn">176 of 268 (65.7%)</span> patients with a stage-2 reading were <b>never re-examined</b>. Only 50 (18.7%) reached three or more visits. The hard part was not treating blood pressure. It was finding people again.</p></div>
+</div>
+</div></section>
+
+<section class="bd" id="results"><div class="wr">
+<div class="cap rv"><span class="eb">03 · Findings</span><h2 style="font-family:var(--sr);font-weight:800;font-size:clamp(34px,4.4vw,54px);letter-spacing:-.015em;margin-top:12px">Blood-Pressure Outcomes</h2><p class="ld" style="max-width:62ch;margin:18px auto 0">Among engaged patients, street-based care achieved control comparable to office settings, with its largest effects concentrated on the highest-risk patients.</p></div>
+<div class="sb rv" style="margin-top:20px">
+<div class="sc"><div class="scn">−9.2<small> mmHg</small></div><div class="scl">Whole-cohort <b>systolic</b> reduction, first to final visit</div><span class="sct">P = 0.01 · primary systolic</span></div>
+<div class="sc stl"><div class="scn">−6.3<small> mmHg</small></div><div class="scl">Whole-cohort <b>diastolic</b> reduction, robust across all models</div><span class="sct">P &lt; 0.001 · most robust</span></div>
+<div class="sc grn"><div class="scn">46.2<small>%</small></div><div class="scl">Achieved <b>control</b> (&lt;140/90 mmHg) at final visit (30 of 65)</div><span class="sct">office-comparable</span></div>
+<div class="sc"><div class="scn">9 / 9</div><div class="scl">Patients in <b>hypertensive crisis</b> brought out of crisis range</div><span class="sct">every crisis resolved</span></div>
+</div>
+<div class="ex rv">
+<div class="ext"><span class="exc"><svg class="ic"><use href="#i-users"/></svg> By baseline acuity</span><div class="exts" id="tabs"><button class="et on" data-s="0">Whole cohort</button><button class="et" data-s="1">Baseline ≥140/90</button><button class="et" data-s="2">High-risk</button><button class="et" data-s="3">Crisis</button></div></div>
+<div class="ep" id="panel"></div>
+</div>
+<div class="fig rv">
+<div class="fh"><div class="k">The acuity gradient</div><h3>The sickest patients improved most</h3><p>Systolic reduction grows with baseline severity. Because each subgroup is defined by an elevated baseline, part of this magnitude reflects regression to the mean, most acutely in the high-risk band.</p></div>
+<div class="gd" id="grad">
+<div class="gr"><div class="grl"><div class="n">Whole cohort</div><div class="x">n = 65</div></div><div class="gbw"><div class="gb g1" data-w="44%" style="width:0"></div><span class="gv">−9.2</span></div></div>
+<div class="gr"><div class="grl"><div class="n">Baseline ≥140/90</div><div class="x">n = 46</div></div><div class="gbw"><div class="gb g2" data-w="58%" style="width:0"></div><span class="gv">−12.1</span></div></div>
+<div class="gr"><div class="grl"><div class="n">High-risk (≥160 or ≥100)</div><div class="x">n = 30</div></div><div class="gbw"><div class="gb g3" data-w="100%" style="width:0"></div><span class="gv">−20.7</span></div></div>
+</div>
+<div class="gax"><span>0 mmHg</span><span>systolic reduction, first → final visit</span><span>−21 mmHg</span></div>
+<div class="fcap"><b>Figure.</b> Mean first-to-final systolic change by baseline severity. In the high-risk band, systolic fell from <b>171.6 to 150.8 mmHg</b> (P &lt; 0.001). Restricted to a moderate baseline (140–179 mmHg), the reduction attenuates to <b>−6.8 mmHg (P = 0.06)</b>, isolating the regression-to-the-mean component.</div>
+</div>
+<div class="fig rv">
+<div class="fh"><div class="k">Figure 1 · Intervention intensity</div><h3>Interventions delivered (N = 65)</h3><p>Care prioritized low-barrier, street-based treatment when clinic referral was unfeasible. Every patient received screening and disease-specific counseling.</p></div>
+<div class="iv" id="iv">
+<div class="ir"><div class="it"><span class="inm">Comprehensive bundle <small>screening + medication + care coordination</small></span><span class="ivl"><b>27</b> · 41.5%</span></div><div class="itk"><div class="iff c1" data-w="41.5%" style="width:0"></div></div></div>
+<div class="ir"><div class="it"><span class="inm">Medication management <small>without care coordination</small></span><span class="ivl"><b>28</b> · 43.1%</span></div><div class="itk"><div class="iff c2" data-w="43.1%" style="width:0"></div></div></div>
+<div class="ir"><div class="it"><span class="inm">Care coordination only <small>without street pharmacotherapy</small></span><span class="ivl"><b>4</b> · 6.2%</span></div><div class="itk"><div class="iff c3" data-w="6.2%" style="width:0"></div></div></div>
+<div class="ir"><div class="it"><span class="inm">Screening &amp; counseling alone</span><span class="ivl"><b>6</b> · 9.2%</span></div><div class="itk"><div class="iff c4" data-w="9.2%" style="width:0"></div></div></div>
+</div>
+<div class="ivh"><div class="ivhn">84.6%</div><p><b>55 of 65 patients received direct street-based pharmacotherapy</b>, prescribing, dispensing, or adjustment at the point of care. Lisinopril, losartan, and amlodipine accounted for roughly 70% of prescriptions, many on dual- or triple-agent regimens.</p></div>
+</div>
+<div class="fig rv">
+<div class="fh"><div class="k">Figure 3 · Severity transitions</div><h3>Baseline severity and how it shifted</h3><p>Baseline distribution of the analytic cohort across 2017 ACC/AHA categories, with the documented movement toward control.</p></div>
+<div class="svb" id="sev">
+<div class="svs" style="width:16.9%;background:#2C7A57"><div class="in">11<small>Normal / elevated</small></div></div>
+<div class="svs" style="width:12.3%;background:#C79A2E"><div class="in">8<small>Stage 1</small></div></div>
+<div class="svs" style="width:56.9%;background:#B0233A"><div class="in">37<small>Stage 2</small></div></div>
+<div class="svs" style="width:13.8%;background:#7C1424"><div class="in">9<small>Crisis</small></div></div>
+</div>
+<div class="svl">
+<span class="sl"><span class="d" style="background:#2C7A57"></span> <b>11 (16.9%)</b>&nbsp;Normal or elevated</span>
+<span class="sl"><span class="d" style="background:#C79A2E"></span> <b>8 (12.3%)</b>&nbsp;Stage 1 hypertension</span>
+<span class="sl"><span class="d" style="background:#B0233A"></span> <b>37 (56.9%)</b>&nbsp;Stage 2 hypertension</span>
+<span class="sl"><span class="d" style="background:#7C1424"></span> <b>9 (13.8%)</b>&nbsp;Hypertensive crisis</span>
+</div>
+<div class="tr">
+<div class="trc"><div class="trn">9 → 0</div><div class="trt">Every patient presenting in <b>crisis</b> improved ≥1 category; none remained in crisis</div></div>
+<div class="trc"><div class="trn">47.8%</div><div class="trt"><b>22 of 46</b> patients with baseline ≥140/90 improved ≥1 severity category (Wilcoxon P = 0.004)</div></div>
+<div class="trc"><div class="trn">46.2%</div><div class="trt"><b>30 of 65</b> achieved control (&lt;140/90); 14 (21.5%) met the tighter &lt;130/80 target</div></div>
+</div>
+<div class="fcap"><b>Note.</b> Severity per 2017 ACC/AHA categories applied to daily-averaged first-visit values. Control defined as &lt;140/90 mmHg, consistent with pragmatic street-medicine targets.</div>
+</div>
+<div class="du rv"><div class="dui"><svg class="ic"><use href="#i-clock"/></svg></div><div class="dub"><div class="duk">Durability check · through June 2026</div><p>Carrying follow-up a further ~17 months beyond the primary window (median 252 days), the systolic reduction <b>held</b>. The 21 patients who re-engaged declined a further <b>4.9 mmHg</b> instead of drifting back toward baseline.</p></div><div class="dus"><div class="dusn">−10.7</div><div class="dusl">mmHg systolic<br>P = 0.002</div></div></div>
+</div></section>
+
+<section class="bd alt" id="discussion"><div class="wr">
+<div class="cap rv" style="text-align:left;margin-bottom:44px"><span class="eb">04 · Discussion &amp; Conclusions</span></div>
+<div class="dg">
+<div class="dc rv">
+<h3>A Reliable Bridge</h3>
+<p>Repeated street-based engagement with BP monitoring, medication management, and care coordination was associated with meaningful BP reductions among unsheltered adults. The most robust signal was the modeled <strong>diastolic trajectory</strong>, which declined consistently across all four mixed-model specifications (P = 0.003–0.009); derived from within-patient longitudinal modeling rather than a first-to-final change from an elevated baseline, it is the finding least vulnerable to regression to the mean.</p>
+<p>The whole-cohort systolic reduction of 9.2 mmHg is the primary systolic result, but its meaning is clearest in its <strong>distribution</strong>: the effect concentrated among the highest-acuity patients rather than spreading uniformly. The pattern indicates a program that <strong>manages chronic disease for the patients it retains</strong> and concentrates its largest gains on those at highest cardiovascular risk.</p>
+<div class="co"><div class="cok"><svg class="ic"><use href="#i-alert"/></svg> Two-thirds never seen again</div><p>Two-thirds (<b>65.7%</b>) of patients with stage-2 readings were never re-examined, and only 18.7% reached three visits. Critically, this attrition is not unique to street medicine: in the only randomized comparison in a comparable population, a fixed clinic engaged just <b>37%</b> of homeless patients over six months, nearly the mirror image of our own return rate. Loss to follow-up here is a system-level barrier, not a defect of the model. For the patients it retains, street medicine delivers chronic disease management that meets conventional benchmarks, so it works best as a <b>reliable bridge to longitudinal care, housing, and social supportive services</b>, not a substitute for them.</p></div>
+<p class="sub"><svg class="ic"><use href="#i-plus"/></svg> A transferable active ingredient</p>
+<p>Chart review documented medication access (being unable to fill, store, or afford a prescription) as a barrier in at least a third of encounters, so clinicians often supplied short <strong>“bridge” courses on the spot</strong>. Point-of-care dispensing paired with social navigation may be a transferable ingredient that does not require the full street medicine apparatus.</p>
+</div>
+<div class="dc rv">
+<h3>In Context</h3>
+<p>The fair comparison is to other engaged, treated cohorts rather than to population estimates that include the untreated and undiagnosed.</p>
+<ul class="cl">
+<li><span class="v">46.2%</span><span>Our control rate, near the <b>45.3%</b> reported in a larger LA field-based homeless cohort (n = 887).<span class="su">32</span></span></li>
+<li><span class="v">−9.2<small style="font-size:12px"> mmHg</small></span><span>Whole-cohort systolic change (−6.8 once RTM-attenuated) sits within the <b>6–8 mmHg</b> range of pharmacist-led and telemonitoring interventions.<span class="su">40,41</span></span></li>
+<li><span class="v">−7.1<small style="font-size:12px"> mmHg</small></span><span>Team-based care with nonphysician medication titration, a comparable benchmark.<span class="su">42</span></span></li>
+<li><span class="v">~10%</span><span>Lower risk of major CV events per <b>5-mmHg</b> systolic reduction; ~13% each for stroke and heart failure.<span class="su">38</span></span></li>
+</ul>
+<p style="margin-top:20px">These data include no cost analysis, but directly delivered care has elsewhere been tied to less emergency reliance: a Boston mobile clinic returned an estimated <strong>$1.30 per dollar invested</strong><span class="su">46</span>, and a housing and case management trial cut ED visits 24% and hospitalizations 29%.<span class="su">48</span> The financing levers are arriving too: Medicaid street medicine billing pathways, a dedicated place-of-service code, value-based and braided funding, and municipal contracts.</p>
+</div>
+</div>
+<div class="fig rv" style="margin-top:0">
+<div class="fh"><div class="k">Follow-up in context</div><h3>Loss to follow-up looks the same across settings</h3><p>Every setting that serves this population loses most patients after the first contact. The comparison is approximate, but the order of magnitude is strikingly consistent.</p></div>
+<div class="gd" id="ctx">
+<div class="gr"><div class="grl"><div class="n">Street medicine (this study)</div><div class="x">Never re-examined after a stage-2 reading</div></div><div class="gbw"><div class="gb g3" data-w="94%" style="width:0"></div><span class="gv">65.7%</span></div></div>
+<div class="gr"><div class="grl"><div class="n">Fixed VA clinic, homeless (RCT)</div><div class="x">No primary care visit in 6 months, usual-care arm</div></div><div class="gbw"><div class="gb g3" data-w="90%" style="width:0"></div><span class="gv">62.9%</span></div></div>
+<div class="gr"><div class="grl"><div class="n">New Medicaid enrollees</div><div class="x">No primary care visit within 120 days</div></div><div class="gbw"><div class="gb g2" data-w="79%" style="width:0"></div><span class="gv">~55%</span></div></div>
+<div class="gr"><div class="grl"><div class="n">Clinic for the homeless</div><div class="x">Seen only once</div></div><div class="gbw"><div class="gb g2" data-w="76%" style="width:0"></div><span class="gv">~53%</span></div></div>
+<div class="gr"><div class="grl"><div class="n">Hypertension, any primary care</div><div class="x">Not retained at 12 months, preprint</div></div><div class="gbw"><div class="gb g1" data-w="74%" style="width:0"></div><span class="gv">~52%</span></div></div>
+<div class="gr"><div class="grl"><div class="n">Urban federally qualified health center</div><div class="x">Scheduled-appointment no-show rate</div></div><div class="gbw"><div class="gb g1" data-w="60%" style="width:0"></div><span class="gv">41.6%</span></div></div>
+</div>
+<div class="fcap"><b>The head-to-head.</b> In the only randomized comparison in a comparable population, a fixed VA clinic with scheduled appointments and social-work outreach engaged just 37.1% of homeless patients over six months, so 62.9% never attended a single visit, nearly identical to this study's 65.7%. <b>Read with care:</b> metrics differ across settings (outreach re-contact vs appointment attendance vs retention at a fixed time) and denominators differ (all screened vs established-clinic panels), so these are order-of-magnitude benchmarks, not exact equivalents. Sources: O'Toole 2015 (J Gen Intern Med); Levine 2021 (npj Digit Med); Macnee 1997; hypertension retention (medRxiv 2026, preprint); FQHC no-show (BMC Health Serv Res 2020).</div>
+</div>
+<div class="lm rv">
+<div class="lmk"><svg class="ic"><use href="#i-info"/></svg> Limitations</div>
+<div class="lg">
+<div class="li"><svg class="ic"><use href="#i-x"/></svg><p><b>No control group.</b> A retrospective evaluation without a contemporaneous comparison; secular trends cannot be excluded.</p></div>
+<div class="li"><svg class="ic"><use href="#i-activity"/></svg><p><b>Selection from attrition.</b> 75.5% of screened patients had a single visit; cohort outcomes reflect change among the more engaged.</p></div>
+<div class="li"><svg class="ic"><use href="#i-trend"/></svg><p><b>Regression to the mean.</b> Baseline systolic was inversely correlated with change (r = −0.61); the modeled within-patient trajectory (~−3 mmHg) was far smaller than the −20.7 mmHg endpoint change in the same high-risk patients.</p></div>
+<div class="li"><svg class="ic"><use href="#i-clock"/></svg><p><b>Field measurement &amp; missingness.</b> Street BP is more variable than office readings; mixed models assume data missing at random, uncertain in a transient population where dropout may be informative.</p></div>
+</div>
+</div>
+<div class="pq rv"><span class="pqm">“</span><p>Street medicine is not a population health strategy; it reliably manages chronic disease for the patients it retains and specializes in reaching the sickest, serving as a high-intensity bridge to longitudinal care, housing, and social supportive services.</p><div class="pqb">Conclusions</div></div>
+</div></section>
+
+<section class="au"><div class="wr">
+<div class="cap rv"><span class="eb m">Research Authorship</span><h2 style="font-family:var(--sr);font-weight:700;font-size:clamp(26px,3.2vw,36px);margin-top:12px">The Team Behind the Study</h2></div>
+<div class="ag">
+<div class="ac rv"><div class="av">DB</div><h4>Dan Bergholz</h4><div class="dg2">MD</div><div class="af">UCLA General Internal Medicine · Yale Internal Medicine</div></div>
+<div class="ac rv"><div class="av">AH</div><h4>Armen Henderson</h4><div class="dg2">MD, MBA</div><div class="af">University of Miami Miller School of Medicine</div></div>
+<div class="ac rv"><div class="av">ST</div><h4>Sae Takada</h4><div class="dg2">MD, PhD, MHS</div><div class="af">UCLA General Internal Medicine &amp; Health Services Research</div></div>
+<div class="ac rv"><div class="av">ES</div><h4>Evan M. Shannon</h4><div class="dg2">MD, MPH</div><div class="af">UCLA General Internal Medicine &amp; Health Services Research</div></div>
+</div></div></section>
+
+<section class="rf"><div class="wr">
+<div class="cap rv"><span class="eb m">Selected References</span><h2 style="font-family:var(--sr);font-weight:700;font-size:clamp(26px,3.2vw,36px);margin-top:12px">Evidence Base</h2></div>
+<div class="rg rv">
+<div class="re"><span class="rn2">1</span><p>Muntner P, et al. Trends in blood pressure control among US adults with hypertension, 1999–2000 to 2017–2018. <i>JAMA.</i> 2020;324(12):1190–1200.</p></div>
+<div class="re"><span class="rn2">12</span><p>Baggett TP, Liauw SS, Hwang SW. Cardiovascular disease and homelessness. <i>J Am Coll Cardiol.</i> 2018;71(22):2585–2597.</p></div>
+<div class="re"><span class="rn2">13</span><p>Roncarati JS, et al. Mortality among unsheltered homeless adults in Boston, 2000–2009. <i>JAMA Intern Med.</i> 2018;178(9):1242–1248.</p></div>
+<div class="re"><span class="rn2">29</span><p>Lynch KA, et al. The case for mobile “street medicine” for patients experiencing homelessness. <i>J Gen Intern Med.</i> 2022;37(15):3999–4001.</p></div>
+<div class="re"><span class="rn2">32</span><p>Takada S, et al. Hypertension control among patients receiving care from a field-based homeless healthcare team. <i>J Gen Intern Med.</i> 2026. doi:10.1007/s11606-026-10488-2.</p></div>
+<div class="re"><span class="rn2">36</span><p>Karashin H, et al. Hypertension: Alternative Clinical Guidelines for the Street. Street Medicine Institute; 2018.</p></div>
+<div class="re"><span class="rn2">37</span><p>Whelton PK, et al. 2017 ACC/AHA guideline for high blood pressure in adults. <i>Hypertension.</i> 2018;71(6):e13–e115.</p></div>
+<div class="re"><span class="rn2">38</span><p>Blood Pressure Lowering Treatment Trialists' Collaboration. Pharmacological blood pressure lowering: meta-analysis. <i>Lancet.</i> 2021;397(10285):1625–1636.</p></div>
+<div class="re"><span class="rn2">42</span><p>Mills KT, et al. Comparative effectiveness of implementation strategies for BP control. <i>Ann Intern Med.</i> 2018;168(2):110–120.</p></div>
+<div class="re"><span class="rn2">43</span><p>Victor RG, et al. A cluster-randomized trial of blood-pressure reduction in Black barbershops. <i>N Engl J Med.</i> 2018;378(14):1291–1301.</p></div>
+<div class="re"><span class="rn2">46</span><p>Song Z, et al. Mobile clinic associated with cost savings from lowering BP and ED use. <i>Health Aff.</i> 2013;32(1):36–44.</p></div>
+<div class="re"><span class="rn2">48</span><p>Sadowski LS, et al. Effect of a housing and case management program on ED visits and hospitalizations: an RCT. <i>JAMA.</i> 2009;301(17):1771–1778.</p></div>
+</div>
+<p class="rnote">Selected from the manuscript's 49 references. Full citations, tables, and the reproducibility packet (de-identified dataset and Python analysis code) appear in the manuscript and online appendices.</p>
+</div></section>
+
+<section class="share"><div class="wr">
+<div class="shi"><svg class="ic"><use href="#i-share"/></svg></div>
+<h2>Share this Study</h2>
+<p>Send it to colleagues, health systems, and policymakers working on care for patients the clinic rarely sees.</p>
+<div class="shb"><button class="sbt lt" id="cpB"><svg class="ic"><use href="#i-copy"/></svg> Copy link to study</button><button class="sbt gh" id="pdB"><svg class="ic"><use href="#i-print"/></svg> Save as PDF report</button></div>
+</div></section>
+
+<footer class="ft"><div class="wr">
+<div class="fti">
+<div><h3>Hypertension Management in Miami's Street Medicine Initiative</h3><p class="fsub">A retrospective cohort of blood pressure outcomes among unsheltered adults, and the case for street medicine as a reliable bridge to longitudinal care, housing, and social supportive services.</p><button class="bkt" id="upB"><svg class="ic"><use href="#i-up"/></svg> Back to top</button></div>
+<div class="fmeta">Target journal: <i>J Gen Intern Med</i><br>Study window: Feb 2021 – Jan 2025<br>Prior presentation: SGIM 2025 · SMI Symposium 2025<br>No conflicts of interest to disclose</div>
+</div>
+<div class="fbase"><span>Original Research · Miami Street Medicine &amp; Dade County Street Response</span><span>Keywords: hypertension · street medicine · homelessness · health equity</span></div>
+</div></footer>
+
+<div class="ts" id="toast"><svg class="ic"><use href="#i-check"/></svg><span id="tmsg">Link copied</span></div>
+
+<script>
+var SG=[
+{name:"Whole cohort",n:65,tag:"Primary analysis",
+sy:{base:"baseline 150.3",delta:"−9.2",fill:64,mk:52,p:"P = 0.01"},
+di:{base:"median 92.0",delta:"−6.3",fill:55,mk:44,p:"P < 0.001"},
+f:[["p","46.2% controlled","30 of 65 reached &lt;140/90 mmHg; 14 (21.5%) met the tighter &lt;130/80 target."],["n","Diastolic is the robust signal","The modeled diastolic trajectory declined across all four model specifications (P = 0.003–0.009)."],["n","Annualized ~3–4 mmHg/yr","Mixed-effects slopes correspond to systolic and diastolic declines on the order of 3–4 mmHg per year."]],
+note:"The whole-cohort systolic reduction is the primary systolic result; its clinical meaning is clearest in how unevenly it is distributed across acuity."},
+{name:"Baseline ≥140/90",n:46,tag:"Elevated at entry",
+sy:{base:"baseline ≥140",delta:"−12.1",fill:70,mk:56,p:"P = 0.01"},
+di:{base:"elevated",delta:"−8.8",fill:60,mk:47,p:"P < 0.001"},
+f:[["p","32.6% controlled","Achieved &lt;140/90 at final visit, all beginning in stage 2 or crisis."],["p","47.8% improved a category","22 of 46 moved up at least one severity category (Wilcoxon P = 0.004)."],["c","Elevated-baseline subgroup","Defined by a raised baseline, so first-to-final change carries a regression-to-the-mean component."]],
+note:"Restricting to a moderate baseline band (systolic 140–179) attenuates the systolic reduction to −6.8 mmHg (P = 0.06)."},
+{name:"High-risk",n:30,tag:"Systolic ≥160 or diastolic ≥100",
+sy:{base:"171.6 → 150.8",delta:"−20.7",fill:100,mk:76,p:"P < 0.001"},
+di:{base:"102.4 → 89.3",delta:"−13.2",fill:78,mk:60,p:"P < 0.001"},
+f:[["p","171.6 → 150.8 mmHg","Systolic fell 20.7 mmHg (95% CI −31.5 to −10.0); diastolic fell 13.2 mmHg (102.4 → 89.3)."],["p","30.0% controlled","9 of 30 reached &lt;140/90 despite the highest baselines in the cohort."],["c","Most exposed to regression","Persisted when endpoints were averaged over two evaluation days (−9 to −13 mmHg; P &lt; 0.02), but the extreme baseline inflates the raw change."]],
+note:"The largest first-to-final effect in the cohort, and the one where regression to the mean contributes most. Read it as treatment effect combined with regression to the mean."},
+{name:"Hypertensive crisis",n:9,tag:"≥180/120 at presentation",
+sy:{base:"baseline ≥180",delta:"9 / 9",fill:100,mk:64,p:"",nou:1},
+di:{base:"baseline ≥120",delta:"→ 0",fill:88,mk:56,p:"",nou:1},
+f:[["p","9 of 9 out of crisis","Every patient presenting in hypertensive crisis improved at least one severity category; none remained in crisis at final visit."],["n","16 (24.6%) ever in crisis","Across the full cohort, 16 patients met crisis criteria at some point during follow-up."],["c","Reassuring, with a caveat","A single transiently elevated reading often falls below threshold on remeasurement, so the resolution is consistent with benefit but not immune to regression."]],
+note:"Crisis resolution is presented as clinically reassuring rather than as evidence against regression to the mean."}
+];
+function ico(t){return t=="p"?"i-checkc":t=="c"?"i-alert":"i-info"}
+function render(i){var s=SG[i];
+var facts=s.f.map(function(x){return '<div class="fct2 '+x[0]+'"><svg class="ic"><use href="#'+ico(x[0])+'"/></svg><p><b>'+x[1]+'.</b> '+x[2]+'</p></div>'}).join("");
+var syU=s.sy.nou?"":'<small style="font-size:12px;font-weight:600"> mmHg</small>';
+var diU=s.di.nou?"":'<small style="font-size:12px;font-weight:600"> mmHg</small>';
+document.getElementById("panel").innerHTML=
+'<div class="eph"><div><h3>'+s.name+'</h3><span class="ept"><svg class="ic"><use href="#i-activity"/></svg> '+s.tag+'</span></div><span class="epn">Patients <b>'+s.n+'</b></span></div>'+
+'<div class="eg"><div><div class="evt">Blood-pressure change, first → final</div>'+
+'<div class="bam"><div class="bt2"><span class="bn">Systolic</span><span class="bd2">'+s.sy.delta+syU+'</span></div><div class="bt3"><div class="bf sy" data-w="'+s.sy.fill+'%" style="width:0"></div><div class="bmk" style="left:'+s.sy.mk+'%"></div></div><div class="bl"><span>'+s.sy.base+'</span><span>'+s.sy.p+'</span></div></div>'+
+'<div class="bam"><div class="bt2"><span class="bn">Diastolic</span><span class="bd2 s">'+s.di.delta+diU+'</span></div><div class="bt3"><div class="bf di" data-w="'+s.di.fill+'%" style="width:0"></div><div class="bmk" style="left:'+s.di.mk+'%"></div></div><div class="bl"><span>'+s.di.base+'</span><span>'+s.di.p+'</span></div></div>'+
+'</div><div><div class="evt">Key results</div>'+facts+'</div></div>'+
+'<div class="en">'+s.note+'</div>';
+requestAnimationFrame(function(){document.querySelectorAll("#panel .bf").forEach(function(el){var w=el.getAttribute("data-w");requestAnimationFrame(function(){el.style.width=w})})});
+}
+document.getElementById("tabs").addEventListener("click",function(e){var b=e.target.closest(".et");if(!b)return;document.querySelectorAll(".et").forEach(function(x){x.classList.remove("on")});b.classList.add("on");render(+b.dataset.s)});
+render(0);
+var io=new IntersectionObserver(function(en){en.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}})},{threshold:.12,rootMargin:"0px 0px -40px 0px"});
+document.querySelectorAll(".rv").forEach(function(el){io.observe(el)});
+var bio=new IntersectionObserver(function(en){en.forEach(function(e){if(e.isIntersecting){e.target.querySelectorAll("[data-w]").forEach(function(el){var w=el.getAttribute("data-w");setTimeout(function(){el.style.width=w},80)});bio.unobserve(e.target)}})},{threshold:.3});
+["grad","iv","sev","ctx"].forEach(function(id){var el=document.getElementById(id);if(el)bio.observe(el)});
+var nav=document.getElementById("nav"),links=[].slice.call(document.querySelectorAll(".nl a[data-n]")),secs=["background","methods","results","discussion"].map(function(id){return document.getElementById(id)});
+window.addEventListener("scroll",function(){nav.classList.toggle("sc",window.scrollY>20);var c="",y=window.scrollY+120;secs.forEach(function(s){if(s&&s.offsetTop<=y)c=s.id});links.forEach(function(a){a.classList.toggle("on",a.getAttribute("href")=="#"+c)})},{passive:true});
+function toast(m){var t=document.getElementById("toast");document.getElementById("tmsg").textContent=m;t.classList.add("on");clearTimeout(window._t);window._t=setTimeout(function(){t.classList.remove("on")},2200)}
+function cp(){navigator.clipboard&&navigator.clipboard.writeText(window.location.href).then(function(){toast("Link copied to clipboard")}).catch(function(){toast("Copy this page's URL to share")})}
+document.getElementById("shB").addEventListener("click",function(){navigator.share?navigator.share({title:document.title,url:window.location.href}).catch(function(){}):cp()});
+document.getElementById("cpB").addEventListener("click",cp);
+document.getElementById("prB").addEventListener("click",function(){window.print()});
+document.getElementById("pdB").addEventListener("click",function(){window.print()});
+document.getElementById("cueB").addEventListener("click",function(){document.getElementById("toc").scrollIntoView({behavior:"smooth"})});
+document.getElementById("upB").addEventListener("click",function(){window.scrollTo({top:0,behavior:"smooth"})});
+</script>
+</body>
+</html>
